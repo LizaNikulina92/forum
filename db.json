@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "email": "m.amantia@example.com",
+      "password": "$2a$10$AEz.FXRi9qLfU8PJVktF9.HTzXSK90IGZ0WXQ2nWN3oaTkuJAtidC",
+      "username": "matteo",
+      "firstname": "Matteo",
+      "lastname": "Amantia",
+      "role": "user",
+      "id": 1
+    },
+    {
+      "email": "c.dottavi@example.com",
+      "password": "$2a$10$WgzAw0u8dX2IbQblB2GcwecwUnkNim/8EVJ2IgCjBFCa3ScgC5q/6",
+      "username": "claudia",
+      "firstname": "Claudia",
+      "lastname": "D'Ottavi",
+      "role": "user",
+      "id": 2
+    }
+  ],
+  "post": [
+    {
+      "title": "Io sono la prima Fiordaliso",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      "username": "claudia",
+      "userId": 2,
+      "section": "notre dame de paris",
+      "id": 3
+    },
+    {
+      "title": "Disc 1",
+      "content": "lorem",
+      "username": "matteo",
+      "userId": 1,
+      "section": "jesus christ superstar",
+      "id": 4
+    }
+  ]
+}

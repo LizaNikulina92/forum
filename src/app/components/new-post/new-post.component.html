@@ -1,0 +1,46 @@
+<div class="box">
+  <div class="container">
+    <form #f="ngForm">
+      <mat-card>
+        <mat-card-title class="mb-4">New discussion</mat-card-title>
+        <mat-card-content class="container-form">
+          <mat-form-field appearance="fill">
+            <mat-label>Title</mat-label>
+            <input
+              matInput
+              name="title"
+              ngModel
+              type="text"
+              id="title"
+              placeholder="Enter title"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Text</mat-label>
+            <textarea
+              matInput
+              name="content"
+              ngModel
+              type="text"
+              id="content"
+              placeholder="Enter text"
+              required
+            ></textarea>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+          <button
+            mat-raised-button
+            color="accent"
+            type="button"
+            (click)="sendPost()"
+          >
+            Add
+          </button>
+          <!--           <button mat-raised-button color="warn" type="submit">Close</button> -->
+        </mat-card-actions>
+      </mat-card>
+    </form>
+  </div>
+</div>

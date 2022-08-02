@@ -1,0 +1,42 @@
+<div class="container">
+  <form #f="ngForm" (ngSubmit)="onSubmit()">
+    <mat-card>
+      <mat-card-title>Login</mat-card-title>
+      <mat-card-content class="container-form">
+        <mat-form-field appearance="standard">
+          <mat-label for="email">Email address:</mat-label>
+          <input
+            matInput
+            name="email"
+            ngModel
+            type="email"
+            id="email"
+            placeholder="Enter email"
+            required
+          />
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+          <mat-label for="password">Password:</mat-label>
+          <input
+            matInput
+            name="password"
+            ngModel
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          /><mat-error *ngIf="value.invalid"
+            >{{getErrorMessageValue()}}</mat-error
+          >
+          </mat-form-field
+        >
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="accent" type="submit">Login</button>
+         <div *ngIf="error" role="alert">{{error}}</div>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</div>
+

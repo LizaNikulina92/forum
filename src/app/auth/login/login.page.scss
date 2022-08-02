@@ -1,0 +1,15 @@
+.container {
+  margin: 3em auto 0;
+  width: 50%;
+}
+.container-form{
+  display:flex;
+  flex-direction: column;
+}
+mat-card-title{
+  margin-bottom: 1em;
+}
+div{
+  margin: 1em 0;
+  color: #f44336;
+}

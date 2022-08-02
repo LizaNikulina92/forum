@@ -1,0 +1,23 @@
+.container {
+  margin: 3em auto 0;
+  width: 70%;
+}
+.container-form {
+  display: flex;
+  flex-direction: column;
+}
+mat-card-title {
+  margin-bottom: 1em;
+}
+div {
+  margin: 1em 0;
+  color: #f44336;
+}
+mat-form-field {
+  display: block;
+  width: 50%;
+}
+#role {
+  text-transform: capitalize;
+  color: #a8a8a8;
+}

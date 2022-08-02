@@ -1,0 +1,52 @@
+<div class="container mt-5">
+  <mat-list>
+    <div
+      class="d-flex justify-content-between align-items-center bg-gray px-4"
+    >
+      <div class="text-light fs-6 text-uppercase">Notre Dame de Paris</div>
+      <button mat-raised-button color="primary" class="my-2" (click)="newPost('notre dame de paris')">
+        <i class="material-icons text-light text-right me-2">add</i>
+        <p class="text-light d-inline-block m-0">Add new discussion</p>
+      </button>
+    </div>
+    <mat-list-item *ngIf="postNDP.length === 0" class="pt-2 mb-3">
+      <p mat-line class="fs-5 text-center text-secondary ">Empty</p>
+    </mat-list-item>
+    <mat-list-item *ngFor="let post of postNDP">
+      <mat-icon mat-list-icon><i class="material-icons">music_note</i></mat-icon>
+      <a mat-line class="fs-5">{{post.title}}</a>
+      <div mat-line class="text-secondary">{{post.username}}</div>
+      <button mat-raised-button color="warn" type="button" *ngIf="post.userId == loggedUserId" (click)="deletePost(post.id)">
+        <i class="material-icons text-light">close</i>
+      </button>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <div
+      class="d-flex justify-content-between align-items-center bg-gray px-4"
+    >
+      <div class="text-light fs-6 text-uppercase">Jesus Christ Superstar</div>
+      <button mat-raised-button color="primary" class="my-2" (click)="newPost('jesus christ superstar')">
+        <i class="material-icons text-light text-right me-2">add</i>
+        <p class="text-light d-inline-block m-0">Add new discussion</p>
+      </button>
+    </div>
+    <mat-list-item *ngIf="postJCS.length === 0" class="pt-2 mb-3">
+      <p mat-line class="fs-5 text-center text-secondary ">Empty</p>
+    </mat-list-item>
+    <mat-list-item *ngFor="let post of postJCS">
+      <mat-icon mat-list-icon><i class="material-icons">music_note</i></mat-icon>
+      <a mat-line class="fs-5">{{post.title}}</a>
+      <div mat-line class="text-secondary">{{post.username}}</div>
+      <button mat-raised-button color="warn" type="button" *ngIf="post.userId == loggedUserId" (click)="deletePost(post.id)">
+        <i class="material-icons text-light">close</i>
+      </button>
+    </mat-list-item>
+  </mat-list>
+</div>
+
+<div class="container position-relative">
+  <button class="d-none" id="close" mat-mini-fab color="warn" type="submit" (click)="close()">
+    <i class="material-icons text-light">close</i>
+  </button>
+</div>
+<app-new-post id="new_post" class="d-none"></app-new-post>

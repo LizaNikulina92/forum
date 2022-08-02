@@ -1,0 +1,19 @@
+.bg-gray{
+  background-color: #424242;
+}
+.mat-list-icon {
+  color: rgba(0, 0, 0, 0.54);
+}
+*{
+  color: #000;
+}
+mat-list-item{
+  border-top: 1px solid gray;
+}
+#close{
+  position: absolute;
+  z-index: 10;
+  top: -16.5em;
+  right: 0;
+}
+

@@ -2,8 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/auth.service';
-import { Iregister } from 'src/app/auth/interfaces/iregister';
-import { Iusers } from 'src/app/auth/interfaces/iusers';
 import { Ipost } from 'src/app/auth/interfaces/ipost';
 
 @Component({
@@ -49,9 +47,10 @@ export class NewPostComponent implements OnInit {
     this.authService
       .newPost(newPost)
       .subscribe(resp => {
-        console.log(resp);
+        let obj:any = resp
         this.error = undefined;
-        this.router.navigate(['register']);
+        sessionStorage.setItem('post', JSON.stringify(obj))
+        this.router.navigate([`forum/${obj.id}`]);
 
       },
         err => {

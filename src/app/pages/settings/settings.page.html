@@ -1,0 +1,49 @@
+<div class="container mt-5">
+  <h1>Users List</h1>
+
+  <mat-list>
+    <mat-list-item class="row gx-2">
+      <h4 class="col-lg-3 col-9 text-dark mb-0 fw-bold">Username</h4>
+      <h4 class="col-3 text-dark mb-0 fw-bold hide">Name</h4>
+      <h4 class="col-3 text-dark mb-0 fw-bold hide">Email</h4>
+      <h4 class="col-2 text-dark mb-0 fw-bold">Role</h4>
+    </mat-list-item>
+    <mat-list-item class="row gx-2" *ngFor="let user of allUsers; let i=index">
+      <h4 class="col-lg-3 col-9 text-dark mb-0">{{user.username}}</h4>
+      <h4 class="col-3 text-dark mb-0 hide">{{user.firstname}} {{user.lastname}}</h4>
+      <h4 class="col-3 text-dark mb-0 hide">{{user.email}}</h4>
+      <div class="col-2" *ngIf="user.id !== 1 && user.id !== 2">
+      <button
+      id="role-btn"
+        type="button"
+        mat-raised-button
+        value= {{user.role}}
+        (click)="changeRole(user.id)"
+      >
+        {{user.role}}
+      </button>
+    </div>
+      <h4
+        class="col-2 text-dark mb-0 fs-6"
+        *ngIf="user.id === 1 || user.id === 2"
+      >
+        owner
+      </h4>
+      <div class="col-1 text-end">
+      <button
+        mat-raised-button
+        color="warn"
+        type="button"
+        (click)="deleteUser(user.id)"
+        *ngIf="user.id !== 1 && user.id !== 2"
+      >
+        <i class="material-icons text-light">close</i>
+      </button>
+    </div>
+    </mat-list-item>
+  </mat-list>
+
+
+  <mat-paginator #paginator [length]='allUsers.length' [pageSizeOptions]="[5, 25, 50]" aria-label="Select page">
+  </mat-paginator>
+</div>

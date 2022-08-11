@@ -18,6 +18,10 @@ import { FormsModule, NgForm, ReactiveFormsModule, } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NewPostComponent } from './components/new-post/new-post.component';
 import { MatInputModule } from '@angular/material/input';
+import { PostPage } from './pages/post/post.page';
+import { SettingsPage } from './pages/settings/settings.page';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,9 @@ import { MatInputModule } from '@angular/material/input';
     NavbarComponent,
     HomePage,
     ForumPage,
-    NewPostComponent
+    NewPostComponent,
+    PostPage,
+    SettingsPage
   ],
   imports: [
     AuthModule,
@@ -41,7 +47,9 @@ import { MatInputModule } from '@angular/material/input';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatInputModule
+    MatInputModule,
+    MatSlideToggleModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

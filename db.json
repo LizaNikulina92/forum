@@ -1,40 +1,152 @@
 {
   "users": [
     {
-      "email": "m.amantia@example.com",
-      "password": "$2a$10$AEz.FXRi9qLfU8PJVktF9.HTzXSK90IGZ0WXQ2nWN3oaTkuJAtidC",
-      "username": "matteo",
-      "firstname": "Matteo",
-      "lastname": "Amantia",
-      "role": "user",
+      "email": "a.webber@example.com",
+      "password": "$2a$10$wmI3JoxEh1pl2ca3UR3hSeG6.6w6YLxA83Pz8/194vI3sLnuuX2gq",
+      "username": "andrew_lloyd_webber",
+      "firstname": "Andrew",
+      "lastname": "Lloyd Webber",
+      "role": "admin",
       "id": 1
     },
     {
+      "email": "r.cocciante@example.com",
+      "password": "$2a$10$nnFH7SzwmEjomMc9zlZLb.dDhdmOKtjldtD7QgQ0gmIzLyYG6cA1W",
+      "username": "riccardo_cocciante",
+      "firstname": "Riccardo",
+      "lastname": "Cocciante",
+      "role": "admin",
+      "id": 2
+    },
+    {
       "email": "c.dottavi@example.com",
-      "password": "$2a$10$WgzAw0u8dX2IbQblB2GcwecwUnkNim/8EVJ2IgCjBFCa3ScgC5q/6",
-      "username": "claudia",
+      "password": "$2a$10$xnXB.AvRKhbYuKsWGBCi5ObLnpcJQuldx4cKtfU42kS7Z9aQ.he.u",
+      "username": "claudia82",
       "firstname": "Claudia",
       "lastname": "D'Ottavi",
       "role": "user",
-      "id": 2
+      "id": 3
+    },
+    {
+      "email": "g.ditonno@example.com",
+      "password": "$2a$10$s9UuCoZofG8x3IpA9t7LEOyopVmlnENY1QTJdggaw3tu0XNGq21m2",
+      "username": "non_tonno",
+      "firstname": "Giò",
+      "lastname": "Di Tonno",
+      "role": "user",
+      "id": 4
+    },
+    {
+      "email": "l.ponce@example.com",
+      "password": "$2a$10$ec6KRZhLb/UaUj5D4NXC6utemmfMZ071lEqG5FFlqNXQV1NpDAkHa",
+      "username": "lola<3",
+      "firstname": "Lola",
+      "lastname": "Ponce",
+      "role": "user",
+      "id": 5
+    },
+    {
+      "email": "v.matteucci@example.com",
+      "password": "$2a$10$qLhbTpDsCmTo1dwnrsNacecdYrlILmQC8PU1a4K9F.Tgq8F8w0rbG",
+      "username": "vitto_rulez",
+      "firstname": "Vittorio",
+      "lastname": "Matteucci",
+      "role": "admin",
+      "id": 6
+    },
+    {
+      "email": "g.galatonei@example.com",
+      "password": "$2a$10$Y7p1lQLSmwa/dhKlpkpIhu6fCiq1TvU5O6TFiYvP3O8ZfvJVo7W6m",
+      "username": "graziano_gallo",
+      "firstname": "Graziano",
+      "lastname": "Galatone",
+      "role": "user",
+      "id": 7
+    },
+    {
+      "email": "m.settii@example.com",
+      "password": "$2a$10$153f66y2bUgqjncWlAYzHuq.9dWp92HyQzZS/jzzqP0aratm2A/0W",
+      "username": "matteo7",
+      "firstname": "Matteo",
+      "lastname": "Setti",
+      "role": "user",
+      "id": 8
+    },
+    {
+      "email": "m.guerzoni@example.com",
+      "password": "$2a$10$.pgWemXLGRqEvFonZHlmbOIXOt9dXUnXKKxwO5Vv2F.qn1MOuBGx2",
+      "username": "ilGuerzo",
+      "firstname": "Marco",
+      "lastname": "Guerzoni",
+      "role": "admin",
+      "id": 9
+    },
+    {
+      "email": "m.amantia@example.com",
+      "password": "$2a$10$z9pUG7zhq8nX4QPe6IrGbu/JHehxUelL6B6eAmR3S0L/z.BzFXLRa",
+      "username": "matteo_amantia",
+      "firstname": "Matteo",
+      "lastname": "Amantia",
+      "role": "user",
+      "id": 10
+    },
+    {
+      "email": "t.neeley@example.com",
+      "password": "$2a$10$TF8SyrKmb1/WVQGU7uvUbuPFqaLUFnqQxsMP8VIIXLNqz57ox8pwa",
+      "username": "teddy",
+      "firstname": "Ted",
+      "lastname": "Neeley",
+      "role": "user",
+      "id": 11
     }
   ],
   "post": [
     {
-      "title": "Io sono la prima Fiordaliso",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-      "username": "claudia",
-      "userId": 2,
+      "title": "Chi è il vostro personaggio preferito?",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "username": "matteo_amantia",
+      "userId": 10,
+      "section": "notre dame de paris",
+      "id": 1
+    },
+    {
+      "title": "Fiordaliso preferita!",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "username": "claudia82",
+      "userId": 3,
       "section": "notre dame de paris",
       "id": 3
     },
     {
-      "title": "Disc 1",
-      "content": "lorem",
-      "username": "matteo",
-      "userId": 1,
+      "title": "\"Jesus is cool\"",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "username": "teddy",
+      "userId": 11,
       "section": "jesus christ superstar",
       "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "content": "Fiordaliso",
+      "username": "claudia82",
+      "userId": 3,
+      "postId": 1,
+      "id": 1
+    },
+    {
+      "content": "Quasimodo",
+      "username": "non_tonno",
+      "userId": 4,
+      "postId": 1,
+      "id": 2
+    },
+    {
+      "content": "Febo",
+      "username": "matteo_amantia",
+      "userId": 10,
+      "postId": 1,
+      "id": 3
     }
   ]
 }

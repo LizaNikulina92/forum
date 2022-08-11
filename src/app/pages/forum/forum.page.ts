@@ -10,6 +10,7 @@ export class ForumPage implements OnInit {
 
   APIpost = "http://localhost:4201/post/";
   loggedUserId = undefined;
+  roleAdmin = undefined;
   allPost: any[] = [];
   postNDP: any[] = [];
   postJCS: any[] = [];
@@ -19,18 +20,19 @@ export class ForumPage implements OnInit {
 
 
   ngOnInit(): void {
-    this.arrTransform();
+    this.getPostData();
     this.jsonData();
   }
   jsonData() {
     let jsonData = localStorage.getItem('authenticated');
     if (jsonData) {
       let user = JSON.parse(jsonData);
-      this.loggedUserId = user.user.id
+      this.loggedUserId = user.user.id;
+      this.roleAdmin = user.user.role;
     }
   }
 
-  arrTransform() {
+  getPostData() {
     fetch(this.APIpost)
       .then((response) => response.json())
       .then(postArr => {
@@ -65,7 +67,7 @@ export class ForumPage implements OnInit {
     })
       .then(res => res.json())
       .then(json => {
-        this.arrTransform();
+        this.getPostData();
       });
   }
 }

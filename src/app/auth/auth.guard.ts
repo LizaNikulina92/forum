@@ -19,8 +19,12 @@ export class AuthGuard implements CanActivate {
 /*
     return this.authService.isAuthenticated(); */
     return this.authService.authSubject.pipe(
-      map(user => !!user),
+      map(user => {
+        console.log(user);
+        return !!user;
+      }),
       map(userBool => {
+        console.log(userBool)
         if(userBool){
           return true;
         }
@@ -29,9 +33,4 @@ export class AuthGuard implements CanActivate {
     )
 
   }
-/*   canLoad(
-    route: Route,
-    segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
-  } */
 }

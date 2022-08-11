@@ -15,6 +15,7 @@ export class RegisterPage implements OnInit {
   email = new FormControl('', [Validators.required, Validators.email]);
   value = new FormControl('', [Validators.required, Validators.required]);
   roleValue = 'user';
+  roleAdmin = 'admin';
 
   constructor(private authService: AuthService, private router: Router) { }
 

@@ -1,0 +1,21 @@
+mat-list-item{
+  border-top: 1px solid gray;
+}
+#role-btn{
+  min-width: 74px;
+
+}
+#role-btn[value = "user"]{
+  background-color: #b0bec5;
+  color: #000000de;
+}
+#role-btn[value = "admin"]{
+  background-color: #c2185b;
+  color: #fff;
+}
+@media screen and (max-width: 992px) {
+  .hide {
+    display: none;
+  }
+}
+

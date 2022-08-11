@@ -1,0 +1,41 @@
+<div class="container mt-5">
+  <mat-list>
+    <div class="d-flex justify-content-between align-items-center bg-gray px-4">
+      <h2 class="mb-2 me-2 mt-2 text-light">{{postTitle}}</h2>
+      <p class="text-pink m-0">Pubblicato da: {{postUsername}}</p>
+    </div>
+    <div id="post-content">
+      <p class="text-black m-0">{{postContent}}</p>
+    </div>
+    <mat-list-item *ngFor="let comment of allComments" >
+      <p mat-line class="text-dark">{{comment.content}}</p>
+      <p mat-line class="text-secondary mt-1">Pubblicato da: {{comment.username}}</p>
+      <button mat-raised-button color="warn" type="button" *ngIf="comment.userId === loggedUserId || roleAdmin === 'admin' " (click)="deleteComment(comment.id)">
+        <i class="material-icons text-light">close</i>
+      </button>
+    </mat-list-item>
+  </mat-list>
+
+  <form #f="ngForm">
+    <mat-card class="mt-5">
+      <mat-card-content class="container-form">
+        <mat-form-field appearance="fill">
+          <mat-label>Text</mat-label>
+          <textarea
+            cdkTextareaAutosize
+            matInput
+            name="comment"
+            ngModel
+            type="text"
+            id="comment"
+            placeholder="Enter text"
+            required
+          ></textarea>
+        </mat-form-field>
+        <button mat-raised-button color="accent" type="button" (click)="newComment()">
+          Add comment
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</div>

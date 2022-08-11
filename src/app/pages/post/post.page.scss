@@ -1,0 +1,34 @@
+.bg-gray{
+  background-color: #424242;
+  border-top-left-radius: 0.4em ;
+  border-top-right-radius: 0.4em ;
+}
+div#post-content{
+  padding: 1.5em;
+  background-color: lighten($color: gray, $amount: 40%);
+  border-bottom-left-radius: 0.4em ;
+  border-bottom-right-radius: 0.4em ;
+}
+.text-pink{
+  color: lighten($color: gray, $amount: 20%);
+}
+.container-form {
+  display: flex;
+  flex-direction: column;
+}
+.box {
+  display: flex;
+  align-items: center;
+  background: #ffffffe9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+mat-list > mat-list-item{
+  border-top: 1px solid gray;
+}
+mat-list > mat-list-item:first-of-type{
+  border-top: none
+}

@@ -6,6 +6,7 @@ import { BehaviorSubject, tap } from 'rxjs';
 import { Ipost } from './interfaces/ipost';
 import { Iregister } from './interfaces/iregister';
 import { Iusers } from './interfaces/iusers';
+import { Icomment } from './interfaces/icomment';
 
 @Injectable({
   providedIn: 'root'
@@ -61,5 +62,9 @@ helper = new JwtHelperService();
 
       newPost(obj: Ipost){
         return this.http.post(this.urlJsonServer+'/post', obj)
+      }
+
+      addComment(obj: Icomment){
+        return this.http.post(this.urlJsonServer+'/comments', obj)
       }
 }

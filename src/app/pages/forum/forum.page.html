@@ -14,9 +14,9 @@
     </mat-list-item>
     <mat-list-item *ngFor="let post of postNDP">
       <mat-icon mat-list-icon><i class="material-icons">music_note</i></mat-icon>
-      <a mat-line class="fs-5">{{post.title}}</a>
-      <div mat-line class="text-secondary">{{post.username}}</div>
-      <button mat-raised-button color="warn" type="button" *ngIf="post.userId == loggedUserId" (click)="deletePost(post.id)">
+      <a mat-line class="fs-5" [routerLink]="['/forum/'+post.id]">{{post.title}}</a>
+      <div mat-line class="text-secondary mt-1">Pubblicato da: {{post.username}}</div>
+      <button mat-raised-button color="warn" type="button" *ngIf="post.userId == loggedUserId || roleAdmin === 'admin' " (click)="deletePost(post.id)">
         <i class="material-icons text-light">close</i>
       </button>
     </mat-list-item>
@@ -36,8 +36,8 @@
     <mat-list-item *ngFor="let post of postJCS">
       <mat-icon mat-list-icon><i class="material-icons">music_note</i></mat-icon>
       <a mat-line class="fs-5">{{post.title}}</a>
-      <div mat-line class="text-secondary">{{post.username}}</div>
-      <button mat-raised-button color="warn" type="button" *ngIf="post.userId == loggedUserId" (click)="deletePost(post.id)">
+      <div mat-line class="text-secondary mt-1">Pubblicato da: {{post.username}}</div>
+      <button mat-raised-button color="warn" type="button" *ngIf="post.userId == loggedUserId || roleAdmin === 'admin'" (click)="deletePost(post.id)">
         <i class="material-icons text-light">close</i>
       </button>
     </mat-list-item>

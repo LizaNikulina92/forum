@@ -22,6 +22,10 @@ import { PostPage } from './pages/post/post.page';
 import { SettingsPage } from './pages/settings/settings.page';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { NdpPage } from './pages/ndp/ndp.page';
+import { JcsPage } from './pages/jcs/jcs.page';
+import {MatTabsModule} from '@angular/material/tabs';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +35,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     ForumPage,
     NewPostComponent,
     PostPage,
-    SettingsPage
+    SettingsPage,
+    NdpPage,
+    JcsPage
   ],
   imports: [
     AuthModule,
@@ -49,7 +55,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     HttpClientModule,
     MatInputModule,
     MatSlideToggleModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

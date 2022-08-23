@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
   constructor(private authService: AuthService) {
     this.authService.authSubject.subscribe(val => {
       if (val !== null){
-        this.userWelcome = `MusiForum  | Ciao, ${val?.user.firstname}`;
+        this.userWelcome = `MusiForum  | Ciao ${val?.user.firstname}`;
       } else {
         this.userWelcome = 'MusiForum'
       }

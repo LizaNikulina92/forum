@@ -1,8 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ThemePalette } from '@angular/material/core';
 import { MatPaginator } from '@angular/material/paginator';
-import { last } from 'rxjs';
-import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
+import { MatTableDataSource} from '@angular/material/table';
 
 
 @Component({
@@ -15,7 +13,8 @@ export class SettingsPage implements OnInit {
   allUsers: any[] = [];
 
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit(): void {
     this.getUsersData();
@@ -44,16 +43,6 @@ export class SettingsPage implements OnInit {
         this.getUsersData();
       });
   }
-
-/*   changeRole(id: number, c: any) {
-    if (c.target.checked) {
-      this.roleAdmin(id)
-
-    } else if (c.target.checked === false) {
-      this.roleUser(id)
-    }
-
-  } */
 
   changeRole(id: number) {
     if (this.allUsers[id-1].role == 'user') {
